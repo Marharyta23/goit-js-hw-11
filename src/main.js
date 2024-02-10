@@ -17,7 +17,8 @@ refs.form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(e) {
   e.preventDefault();
   refs.gallery.innerHTML = '';
-  userTag = e.target.elements.search.value;
+  userTag = e.target.elements.search.value.trim();
+  console.log(userTag);
   if (userTag === '') {
     iziToast.error({
       position: 'bottomCenter',
